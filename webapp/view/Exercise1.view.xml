@@ -1,3 +1,28 @@
-<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="exercise1.controller.Exercise1"><Page id="page" title="{i18n>title}">
+<mvc:View xmlns:mvc="sap.ui.core.mvc" 
+    xmlns="sap.m"             
+    xmlns:l="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form"
+    controllerName="exercise1.controller.Exercise1">
+    <Page id="page" title="{i18n>title}">
+        <f:SimpleForm editable="true" id="SimpleForm" 
+            layout="ResponsiveGridLayout"
+        >
+        
+        <Label text="Name"  id="Name"/>
+        <Input id="Input"/>
+
+        <Label text="Country" id="Country"/>
+        <Select id="Select"/>
+
+
+        
+        <Toolbar id="tb">
+        <ToolbarSpacer id="tbs"/>
+        <Button text="Save" type="Emphasized" id="save"/>
+        <Button text="Clear" id="clr"/>
+        </Toolbar>
+
+
+        </f:SimpleForm>
     </Page>
 </mvc:View>
