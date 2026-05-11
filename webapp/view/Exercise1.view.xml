@@ -10,30 +10,30 @@
             >
             
             <Label text="Name"  id="Name"/>
-            <Input id="NameInput"/>
+            <Input id="NameInput" value="{/Name}"/>
 
             <Label id="StreetNo" text="Street/No">            
             </Label>
-            <Input id="StreetInput">
+            <Input id="StreetInput" value="{/Street}">
             <layoutData>
             <l:GridData id="StreetInputGrid" span="L6 M6 S10"></l:GridData>
             </layoutData>
             </Input>
-            <Input id="NoInput">
+            <Input id="NoInput" value="{/HouseNo}">
             <layoutData>
             <l:GridData id="NoInputGrid" span="L4 M4 S10"></l:GridData>
             </layoutData>
             </Input>
 
             <Label id="ZipCodeCity" text="Zip Code/City"></Label>
-            <Input id="ZipCodeInput">
+            <Input id="ZipCodeInput" value="{/ZipCode}">
             <layoutData>
             <l:GridData id="ZipCodeInputGrid" span="L4 M4 S10"></l:GridData>
             </layoutData>
             </Input>
-            <Input id="CountryInput">
+            <Input id="CityInput" value="{/City}">
             <layoutData>
-            <l:GridData id="CountryInputGrid" span="L6 M6 S10"></l:GridData>
+            <l:GridData id="CityInputGrid" span="L6 M6 S10"></l:GridData>
             </layoutData>
             </Input>
 
@@ -47,12 +47,13 @@
             </Select>
 
 
-            
+           <!-- 
             <Toolbar id="Toolbar1">
             <ToolbarSpacer id="ToolbarSpacer1"/>
-            <Button text="Save" type="Emphasized" id="save"/>
-            <Button text="Clear" id="clr"/>
+            <Button text="Save" type="Emphasized" id="save" press="onSave"/>
+            <Button text="Clear" id="clr" press="onClear"/>
             </Toolbar>
+            -->
 
 
             </f:SimpleForm>

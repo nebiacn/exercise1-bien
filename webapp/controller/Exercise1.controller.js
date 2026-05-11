@@ -5,14 +5,19 @@ sap.ui.define([
     "use strict";
 
     return Controller.extend("exercise1.controller.Exercise1", {
-        onInit() {
-            var oData = {   "SelectedCountry": "",
-                            "ListofCountries": [    { "Country": "England"  },
+        onInit() { this._oInitialData = {   Name: "",
+                                            Street: "",
+                                            HouseNo: "",
+                                            ZipCode: "",
+                                            City: "",
+                                            SelectedCountry: "",
+                                            ListofCountries: [    { "Country": "England"  },
                                                     { "Country": "Germany"  },
                                                     { "Country": "USA"      },
-                                                    { "Country": "Philippines"  }   ]   }
-            var oModel  = new JSONModel(oData);
-            this.getView().setModel(oModel);
-        }
+                                                    { "Country": "Philippines"  }   ]    };                                                                          
+            const oModelData = structuredClone(this._oInitialData);
+            this.getView().setModel( new JSONModel(oModelData) );
+        },
+        onClear() { this.getView().getModel().setData(structuredClone(this._oInitialData)) }
     });
 });
