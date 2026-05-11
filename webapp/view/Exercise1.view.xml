@@ -5,37 +5,61 @@
         xmlns:core="sap.ui.core"
         controllerName="exercise1.controller.Exercise1">
         <Page id="page" title="{i18n>title}">
-            <f:SimpleForm editable="true" id="SimpleForm" 
+            <f:SimpleForm editable="true" id="idSimpleForm" 
                 layout="ResponsiveGridLayout"
-            >
+                columnsL="1"
+                columnsM="1"                
+                emptySpanL="3"
+                emptySpanM="3"
+                labelSpanL="3"
+                labelSpanM="3"  >
             
             <Label text="Name"  id="Name"/>
             <Input id="NameInput" value="{/Name}"/>
 
-            <Label id="StreetNo" text="Street/No">            
-            </Label>
-            <Input id="StreetInput" value="{/Street}">
-            <layoutData>
-            <l:GridData id="StreetInputGrid" span="L6 M6 S10"></l:GridData>
-            </layoutData>
-            </Input>
-            <Input id="NoInput" value="{/HouseNo}">
-            <layoutData>
-            <l:GridData id="NoInputGrid" span="L4 M4 S10"></l:GridData>
-            </layoutData>
-            </Input>
+            <Label id="StreetNo" text="Street/No"/>
+            
+<HBox id="idHBox1" width="100%">
+    <Input
+        id="idStreetInput"
+        value="{/Street}"
+        width="99%">  
+        <layoutData>
+        <FlexItemData id="idFID1" growFactor="2"></FlexItemData>
+        </layoutData>
+    </Input>
 
-            <Label id="ZipCodeCity" text="Zip Code/City"></Label>
-            <Input id="ZipCodeInput" value="{/ZipCode}">
-            <layoutData>
-            <l:GridData id="ZipCodeInputGrid" span="L4 M4 S10"></l:GridData>
-            </layoutData>
-            </Input>
-            <Input id="CityInput" value="{/City}">
-            <layoutData>
-            <l:GridData id="CityInputGrid" span="L6 M6 S10"></l:GridData>
-            </layoutData>
-            </Input>
+    <Input
+        id="idNoInput"
+        value="{/HouseNo}"
+        width="100%">
+        <layoutData>
+        <FlexItemData id="idFID2" growFactor="1"></FlexItemData>
+        </layoutData>        
+    </Input>
+</HBox>
+
+
+<Label id="idZipCodeCity" text="Zip Code/City"/>
+<HBox id="idHBox2" width="100%">
+    <Input
+        id="idZipCodeInput"
+        value="{/ZipCode}"
+        width="99%">  
+        <layoutData>
+        <FlexItemData id="idFID3" growFactor="1"></FlexItemData>
+        </layoutData>
+    </Input>
+
+    <Input
+        id="idCityInput"
+        value="{/City}"
+        width="100%">
+        <layoutData>
+        <FlexItemData id="idFID4" growFactor="2"></FlexItemData>
+        </layoutData>        
+    </Input>
+</HBox>            
 
 
             <Label text="Country" id="Country"/>
@@ -47,13 +71,13 @@
             </Select>
 
 
-           <!-- 
+           
             <Toolbar id="Toolbar1">
             <ToolbarSpacer id="ToolbarSpacer1"/>
             <Button text="Save" type="Emphasized" id="save" press="onSave"/>
             <Button text="Clear" id="clr" press="onClear"/>
             </Toolbar>
-            -->
+            
 
 
             </f:SimpleForm>
